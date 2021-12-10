@@ -1,5 +1,5 @@
 var input =
-  process.argv.slice(3) == "t" ? require("./input-test") : require("./input");
+  process.argv[4] == "t" ? require("./input-test") : require("./input");
 const fishes = new Array(9).fill(0);
 
 module.exports = () => {

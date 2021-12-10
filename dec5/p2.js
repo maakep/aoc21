@@ -1,5 +1,5 @@
 var input =
-  process.argv.slice(3) == "t" ? require("./input-test") : require("./input");
+  process.argv[4] == "t" ? require("./input-test") : require("./input");
 
 let highestX = 0;
 let highestY = 0;

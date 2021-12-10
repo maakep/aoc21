@@ -1,10 +1,9 @@
 var fs = require("fs");
-var arg = process.argv[2];
-var num1 = arg[0];
-var num2 = arg[1];
+var arg1 = process.argv[2];
+var arg2 = process.argv[3];
 
-if (num1 == "g") generate(num2);
-else runSolution(num1, num2);
+if (arg1 == "g") generate(arg2);
+else runSolution(arg1, arg2);
 
 function runSolution(num1, num2) {
   var solution = undefined;
@@ -31,12 +30,12 @@ function generate(num) {
   fs.writeFileSync(`./dec${num}/input.js`, `module.exports = [];`);
   fs.writeFileSync(
     `./dec${num}/p1.js`,
-    `const input = process.argv.slice(3) == "t" ? require("./input-test") : require("./input");
+    `const input = process.argv[4] == "t" ? require("./input-test") : require("./input");
 module.exports = () => {}`
   );
   fs.writeFileSync(
     `./dec${num}/p2.js`,
-    `const input = process.argv.slice(3) == "t" ? require("./input-test") : require("./input");
+    `const input = process.argv[4] == "t" ? require("./input-test") : require("./input");
 module.exports = () => {}`
   );
 }

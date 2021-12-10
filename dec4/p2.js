@@ -1,5 +1,5 @@
 var { boards, drawNumbers } =
-  process.argv.slice(3) == "t" ? require("./input-test") : require("./input");
+  process.argv[4] == "t" ? require("./input-test") : require("./input");
 
 module.exports = () => {
   for (const number of drawNumbers) {
