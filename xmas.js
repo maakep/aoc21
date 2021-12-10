@@ -7,7 +7,7 @@ else runSolution(arg1, arg2);
 
 function runSolution(num1, num2) {
   var solution = undefined;
-
+  console.log("");
   try {
     solution = require(`./dec${num1}/p${num2}`);
   } catch (e) {
@@ -19,7 +19,9 @@ function runSolution(num1, num2) {
 
   var res = solution();
   console.log(
-    `${new Date().toTimeString().substr(0, 8)} - dec${num1}/p${num2}.js result:`
+    `\n${new Date()
+      .toTimeString()
+      .substr(0, 8)} - dec${num1}/p${num2}.js result:`
   );
   console.log(res);
 }
