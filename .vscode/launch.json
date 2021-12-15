@@ -12,7 +12,7 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}\\xmas.js",
-      "args": ["11", "1", "t"]
+      "args": ["15", "1"]
     }
   ]
 }
