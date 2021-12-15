@@ -1,3 +1,4 @@
 input*
-package*
+package
 node_modules
+.vscode
